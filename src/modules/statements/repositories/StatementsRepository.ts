@@ -26,11 +26,11 @@ export class StatementsRepository implements IStatementsRepository {
       type
     });
 
-    return this.repository.save(statement);
+    return await this.repository.save(statement);
   }
 
   async findStatementOperation({ statement_id, user_id }: IGetStatementOperationDTO): Promise<Statement | undefined> {
-    return this.repository.findOne(statement_id, {
+    return await this.repository.findOne(statement_id, {
       where: { user_id }
     });
   }

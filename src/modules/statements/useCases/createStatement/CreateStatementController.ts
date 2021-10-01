@@ -9,10 +9,9 @@ enum OperationType {
 }
 
 export class CreateStatementController {
-  async execute(request: Request, response: Response) {
+  async execute(request: Request, response: Response): Promise<Response> {
     const { id: user_id } = request.user;
     const { amount, description } = request.body;
-    console.log(request.body)
 
     const splittedPath = request.originalUrl.split('/')
     const type = splittedPath[splittedPath.length - 1] as OperationType;

@@ -4,6 +4,7 @@ import 'express-async-errors';
 import express from 'express';
 import cors from 'cors';
 
+import 'dotenv/config'
 import './database';
 import './shared/container';
 import { router } from './routes';
