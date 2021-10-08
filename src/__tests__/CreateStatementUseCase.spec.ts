@@ -14,6 +14,7 @@ let createUserUseCase: CreateUserUseCase;
 enum OperationType {
   DEPOSIT = 'deposit',
   WITHDRAW = 'withdraw',
+  TRANSFER = 'transfer'
 }
 
 describe("Create statement", () => {
